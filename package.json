@@ -1,7 +1,7 @@
 {
   "name": "leona-waterfall",
-  "type": "module",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -10,11 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/fonts": "^0.12.1",
-    "@nuxt/icon": "^2.1.1",
-    "@nuxt/image": "^2.0.0",
-    "nuxt": "^4.2.2",
-    "vue": "^3.5.26",
-    "vue-router": "^4.6.4"
+    "@nuxt/fonts": "^0.10.2",
+    "@nuxt/icon": "^1.10.2",
+    "@nuxt/image": "^1.9.1",
+    "nuxt": "^3.15.4",
+    "vue": "latest"
   }
 }
