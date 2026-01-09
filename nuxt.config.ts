@@ -1,5 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindcss from "@tailwindcss/vite"
+import tailwindcss from '@tailwindcss/vite'
+import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   modules: [
@@ -8,15 +8,27 @@ export default defineNuxtConfig({
     '@nuxt/fonts'
   ],
   
-  compatibilityDate: '2024-04-03',
+  compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   css: ['./app/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
   },
   
-  // Configuración para SSR (MPA)
-  ssr: true,
+  ssr: false,
   
-  // Asegúrate de NO tener preset: 'static'
+  css: ['~/assets/css/main.css'],
+  
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false
+    }
+  ],
+  
+  vite: {
+    plugins: [
+      tailwindcss()
+    ]
+  }
 })
